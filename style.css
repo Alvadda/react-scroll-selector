@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 125px;
+  width: 100px;
+  background-color: #fff;
+  overflow: scroll;
+  padding: 50px 0;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.time {
+  font-size: 16px;
+  filter: blur(1px);
+  text-align: center;
+  opacity: 0.3;
+}
+
+.selected {
+  opacity: 1;
+  font-size: 21px;
+  filter: none;
+  /* background-color: aqua; */
+}
+
+.input {
+  font-size: 20px;
+  text-align: center;
+  width: 100px;
+}
