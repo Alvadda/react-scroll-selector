@@ -1,5 +1,5 @@
-const containerElement = document.querySelector(".container");
-const input = document.querySelector(".input");
+const containerElement = document.querySelector(".dropdown-menu");
+const value = document.querySelector(".value");
 let currentTime;
 
 var timer = null;
@@ -9,7 +9,7 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       const element = entry.target;
       if (entry.isIntersecting) {
-        input.value = element.textContent;
+        value.textContent = element.textContent;
         currentTime = element;
       }
       element.classList.toggle("selected", entry.isIntersecting);
@@ -27,7 +27,7 @@ const createTime = (start = false) => {
       minimumIntegerDigits: 2,
       useGrouping: false,
     });
-    const time = document.createElement("div");
+    const time = document.createElement("button");
     time.textContent = hourString;
     time.classList.add("time");
     time.id = `id${hourString}`;
